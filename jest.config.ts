@@ -16,6 +16,7 @@ const config: Config.InitialOptions = {
       tsconfig: 'tsconfig.json', // Adjust if your tsconfig file is located elsewhere
     },
   },
+  maxWorkers: 1
 };
 
 export default config;

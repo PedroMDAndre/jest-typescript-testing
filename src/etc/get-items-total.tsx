@@ -10,7 +10,11 @@ export function getItemsTotal(items : CartItem[]) : number {
   for (const price of prices) {
     // throw an error if the price is not a number
     if (typeof price !== "number") {
-      throw new Error("Non number in list")
+      throw new Error("Non number in list");
+    }
+
+    if(price < 0){
+      throw new Error("Negative cost");
     }
     total += price
   }
